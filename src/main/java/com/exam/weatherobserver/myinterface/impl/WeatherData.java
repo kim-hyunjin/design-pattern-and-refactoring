@@ -1,7 +1,7 @@
-package com.exam.weatherobserver.impl;
+package com.exam.weatherobserver.myinterface.impl;
 
-import com.exam.weatherobserver.Observer;
-import com.exam.weatherobserver.Subject;
+import com.exam.weatherobserver.myinterface.Observer;
+import com.exam.weatherobserver.myinterface.Subject;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,8 @@
-package com.exam.weatherobserver.impl;
+package com.exam.weatherobserver.myinterface.impl;
 
-import com.exam.weatherobserver.DisplayElement;
-import com.exam.weatherobserver.Observer;
-import com.exam.weatherobserver.Subject;
+import com.exam.weatherobserver.myinterface.DisplayElement;
+import com.exam.weatherobserver.myinterface.Observer;
+import com.exam.weatherobserver.myinterface.Subject;
 
 public class HeatIndexDisplay implements Observer, DisplayElement {
     private float heatIndex;

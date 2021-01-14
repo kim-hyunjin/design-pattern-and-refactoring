@@ -1,4 +1,4 @@
-package com.exam.weatherobserver;
+package com.exam.weatherobserver.myinterface;
 
 public interface Observer {
     void update(float temperature, float humidity, float pressure);
