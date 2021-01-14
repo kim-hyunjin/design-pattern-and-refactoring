@@ -17,6 +17,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     @Override
     public void update(Observable obs, Object arg) {
+        // 옵저버가 필요한 데이터를 직접 가져온다. (pull 방식)
         if (obs instanceof WeatherData) {
             WeatherData weatherData = (WeatherData) obs;
             this.temperature = weatherData.getTemperature();
