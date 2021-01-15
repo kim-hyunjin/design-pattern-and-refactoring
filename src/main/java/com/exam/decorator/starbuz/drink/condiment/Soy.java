@@ -21,7 +21,7 @@ public class Soy extends CondimentDecorator{
         }
         return cost;
     }
-    
+
     @Override
     public Beverage.Size getSize() {
         return beverage.getSize();
