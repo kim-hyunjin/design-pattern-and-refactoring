@@ -15,6 +15,7 @@ public abstract class PizzaStore {
         pizza = createPizza(type);
 
         pizza.prepare();
+
         pizza.bake();
         pizza.cut();
         pizza.box();
