@@ -1,5 +1,6 @@
 package com.exam.command.client;
 
+import com.exam.command.Command;
 import com.exam.command.receiver.CeilingFan;
 import com.exam.command.receiver.Light;
 import com.exam.command.invoker.RemoteControlWithUndo;
@@ -66,6 +67,20 @@ public class RemoteLoader {
         remoteControl.onButtonWasPushed(3);
         remoteControl.offButtonWasPushed(3);
         remoteControl.undoButtonWasPushed();
+
+        Command[] partyOn = {livingRoomLightOn, kitchenLightOn, ceilingFanHigh};
+        Command[] partyOff = {livingRoomLightOff, kitchenLightOff, ceilingFanOff};
+
+        MacroCommand partyOnMacro = new MacroCommand(partyOn);
+        MacroCommand partyOffMacro = new MacroCommand(partyOff);
+
+        remoteControl.setCommand(4, partyOnMacro, partyOffMacro);
+
+        System.out.println(remoteControl);
+        System.out.println(" --- Pushing Macro On ---");
+        remoteControl.onButtonWasPushed(4);
+        System.out.println(" --- Pushing Macro Off ---");
+        remoteControl.offButtonWasPushed(4);
 
     }
 }
