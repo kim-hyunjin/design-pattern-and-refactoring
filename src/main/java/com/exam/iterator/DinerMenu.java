@@ -8,6 +8,11 @@ public class DinerMenu {
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
 
+        addItem("채식주의자용 BLT", "통밀 위에 식물성 베이컨, 상추, 토마토를 얹은 메뉴", true, 3000);
+        addItem("BLT", "통밀 위에 베이컨, 상추, 토마토를 얹은 메뉴", false, 3000);
+        addItem("오늘의 스프", "감자 샐러드를 곁들인 오늘의 스프", false, 3300);
+        addItem("핫도그", "사워크라우트, 갖은 양념, 양파, 치즈가 곁들여진 핫도그", false, 3000);
+
 
     }
 
@@ -21,7 +26,10 @@ public class DinerMenu {
         }
     }
 
-    public MenuItem[] getMenuItems() {
-        return menuItems;
+//    public MenuItem[] getMenuItems() {
+//        return menuItems;
+//    }
+    public Iterator createIterator() { // 클라이언트에서는 menuItem이 어떻게 관리되는지 알 필요 없다. 그냥 반복자를 사용해 항목에 하나씩 접근할 수 있으면 된다.
+        return new DinerMenuIterator(menuItems);
     }
 }
