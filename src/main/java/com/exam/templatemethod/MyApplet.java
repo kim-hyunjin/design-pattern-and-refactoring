@@ -21,7 +21,7 @@ public class MyApplet extends Applet {
         repaint();
     }
 
-    public void destroy() { // 브라우저 틀이 닫혀질 때 실행되는 후크 메소드
+    public void destroy() { // 브라우저 틀이 닫혀질 때 실행되는 후크 메소드드
 
     }
 
